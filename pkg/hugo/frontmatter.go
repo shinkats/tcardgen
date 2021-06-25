@@ -121,7 +121,7 @@ func getString(cfm *pageparser.ContentFrontMatter, fmKey string) (string, error)
 func getAllStringItems(cfm *pageparser.ContentFrontMatter, fmKey string) ([]string, error) {
 	v, ok := cfm.FrontMatter[fmKey]
 	if !ok {
-		return nil, NewFMNotExistError(fmKey)
+		return nil, nil
 	}
 
 	switch arr := v.(type) {
